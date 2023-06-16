@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\admin_labgrown.props" />
+</Project>

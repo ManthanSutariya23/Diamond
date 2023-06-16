@@ -1,0 +1,105 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = user_labgrown
+build_property.RootNamespace = user_labgrown
+build_property.ProjectDir = C:\Users\ASUS\source\repos\user_labgrown\user_labgrown\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ASUS\source\repos\user_labgrown\user_labgrown
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblOrders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JkZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblOrders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JkZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblOrders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblOrders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblOrders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblProducts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblProducts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblProducts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblProducts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblProducts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblRegisters/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUmVnaXN0ZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblRegisters/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUmVnaXN0ZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblRegisters/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUmVnaXN0ZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblRegisters/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUmVnaXN0ZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/TblRegisters/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsUmVnaXN0ZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/user_labgrown/user_labgrown/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-nslhpvoy8t

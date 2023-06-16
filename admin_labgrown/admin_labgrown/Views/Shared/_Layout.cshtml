@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - admin_labgrown</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/testCRUD.styles.css" asp-append-version="true" />
+    <link href="~/css/bootstrap-datepicker.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/datatables.bootstrap4.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/materialdesignicons.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/vendor.bundle.base.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/font-awesome.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" asp-append-version="true" />
+
+</head>
+<body class="sidebar-light">
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
+                <ul class="navbar-nav mr-lg-2 d-none d-lg-flex">
+                    <li class="nav-item nav-toggler-item">
+                        <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                    </li>
+
+                </ul>
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">
+                        <h1 style="color: #5e2572">Labgrown Diamond</h1>
+                    </a>
+                </div>
+                <ul class="navbar-nav navbar-nav-right">
+
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <span class="nav-profile-name">Admin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <div class="dropdown-divider"></div>
+                            <a class="">
+                                <a class="nav-link text-dark p-3" asp-area="" asp-controller="Logout" asp-action="Index"><i class="mdi mdi-logout text-primary"></i> Log Out</a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item nav-toggler-item-right d-lg-none">
+                        <button class="navbar-toggler align-self-center" type="button" data-toggle="offcanvas">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            <i class="mdi mdi-view-grid menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblCountries" asp-action="Index">
+                            <i class="mdi mdi-map-marker menu-icon"></i>
+                            <span class="menu-title">Country</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblColors" asp-action="Index">
+                            <i class="mdi mdi-format-color-fill menu-icon"></i>
+                            <span class="menu-title">Color</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblCertificates" asp-action="Index">
+                            <i class="mdi mdi-certificate menu-icon"></i>
+                            <span class="menu-title">Certificate</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblPurities" asp-action="Index">
+                            <i class="mdi mdi-view-quilt menu-icon"></i>
+                            <span class="menu-title">Purity</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblShapes" asp-action="Index">
+                            <i class="mdi mdi-diamond menu-icon"></i>
+                            <span class="menu-title">Shape</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblFluorescences" asp-action="Index">
+                            <i class="mdi mdi-view-quilt menu-icon"></i>
+                            <span class="menu-title">Fluoresces</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblProducts" asp-action="Index">
+                            <i class="fa fa-diamond menu-icon"></i>
+                            <span class="menu-title">Product</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblOrders" asp-action="Index">
+                            <i class="fa fa-diamond menu-icon"></i>
+                            <span class="menu-title">Order</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="TblRegisters" asp-action="Index">
+                            <i class="mdi mdi-account-circle menu-icon"></i>
+                            <span class="menu-title">Users</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            @RenderBody()
+
+            <!-- partial -->
+            
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - admin_labgrown - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/vendor.bundle.base.js"></script>
+    <script src="~/js/jquery.dataTables.js"></script>
+    <script src="~/js/dataTables.bootstrap4.js"></script>
+    <script src="~/js/Chart.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/js/off-canvas.js"></script>
+    <script src="~/js/hoverable-collapse.js"></script>
+    <script src="~/js/template.js"></script>
+    <script src="~/js/settings.js"></script>
+    <script src="~/js/todolist.js"></script>
+    <script src="~/js/dashboard.js"></script>
+    <script src="~/js/data-table.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

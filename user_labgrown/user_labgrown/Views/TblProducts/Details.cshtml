@@ -1,0 +1,132 @@
+﻿@model user_labgrown.Models.TblProduct
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row mt-5">
+    <div class="col-md-4"></div>
+    <div class="col-4 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body text-center">
+                <h4 class="card-title mb-3">Confirm Your Order</h4>
+                <div class="mb-3">
+                    <span style="font-weight: bold">Shape: </span>
+                    <span>@Html.DisplayFor(model => model.ShapeNavigation.ShapeName)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Carat: </span>
+                    <span>@Html.DisplayFor(model => model.Carat)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Purity: </span>
+                    <span>@Html.DisplayFor(model => model.PurityNavigation.Purity)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Certificate: </span>
+                    <span>@Html.DisplayFor(model => model.CertificateNavigation.CertificateName)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Color: </span>
+                    <span>@Html.DisplayFor(model => model.ColorNavigation.Color)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Fluorescence: </span>
+                    <span>@Html.DisplayFor(model => model.FluorescenceNavigation.Fluorescence)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Cut: </span>
+                    <span>@Html.DisplayFor(model => model.CutGrade)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Polish: </span>
+                    <span>@Html.DisplayFor(model => model.Polish)</span>
+                </div>
+
+                <div class="mb-3">
+                    <span style="font-weight: bold">Symmetry: </span>
+                    <span>@Html.DisplayFor(model => model.Symmetry)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+
+<!--
+<h1>Details</h1>
+
+<div>
+    <h4>TblProduct</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CutGrade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CutGrade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Polish)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Polish)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Symmetry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Symmetry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Carat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Carat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificateNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificateNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ColorNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ColorNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FluorescenceNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FluorescenceNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PurityNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PurityNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShapeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShapeNavigation.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+

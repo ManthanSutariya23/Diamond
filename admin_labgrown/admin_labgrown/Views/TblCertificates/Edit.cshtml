@@ -1,0 +1,69 @@
+﻿@model admin_labgrown.Models.TblCertificate
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <h1 class="card-title ml10">Edit Certificate</h1>
+            <div class="col-md-2"></div>
+            <div class="col-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <form asp-action="Edit" class="forms-sample">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="CertificateName" for="exampleInputName1">Certificate Name</label>
+                                <input asp-for="CertificateName" class="form-control" id="exampleInputName1" placeholder="Enter Certificate Name">
+                                <span asp-validation-for="CertificateName" class="text-danger"></span>
+                            </div>
+                            <input type="submit" value="Edit" class="btn btn-primary" />
+                            <a class="btn btn-light" asp-action="Index">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+
+<h1>Edit</h1>
+
+<h4>TblCertificate</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CertificateName" class="control-label"></label>
+                <input asp-for="CertificateName" class="form-control" />
+                <span asp-validation-for="CertificateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

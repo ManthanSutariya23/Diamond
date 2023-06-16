@@ -1,0 +1,31 @@
+﻿@model admin_labgrown.Models.TblColor
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <h1 class="card-title ml10">Delete Color</h1>
+            <div class="col-md-4"></div>
+            <div class="col-4 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <form asp-action="Delete" class="forms-sample">
+                            <div class="mb-3">
+                                <span style="font-weight: bold">Color: </span>
+                                <span>@Html.DisplayFor(model => model.Color)</span>
+                            </div>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                            <a class="btn btn-light" asp-action="Index">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>

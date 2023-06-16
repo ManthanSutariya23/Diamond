@@ -1,0 +1,126 @@
+﻿@model user_labgrown.Models.TblOrder
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+
+            <table class="table table-bordered table-hover mt-5">
+    <tbody>
+        <tr>
+            <th scope="row">
+                Shap
+            </th>
+            <td>
+                @ViewBag.shap
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                  Carat
+            </th>
+            <td>
+                    @ViewBag.carat
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                            Purity
+            </th>
+            <td>
+                            @ViewBag.purity
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                            Certificate
+            </th>
+            <td>
+                            @ViewBag.certificate
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                            Color
+            </th>
+            <td>
+                            @ViewBag.color
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                Fluorescence
+            </th>
+            <td>
+                @ViewBag.fluorescence
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                Cut
+            </th>
+            <td>
+                @ViewBag.cut
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                Symmetry
+            </th>
+            <td>
+                @ViewBag.symmetry
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                Polish
+            </th>
+            <td>
+                @ViewBag.polish
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!--
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+                <input asp-for="UserId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductId" class="control-label"></label>
+                <select asp-for="ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+                        -->
+            <div class="form-group">
+                <input type="submit" value="Place Order" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,170 @@
+﻿@model IEnumerable<admin_labgrown.Models.TblProduct>
+
+@{
+    ViewData["Title"] = "Index";
+    int no = 0;
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 card">
+                <div class="card-body">
+                    <a class="btn btn-primary mr-2 mb-4" asp-action="Create">Create New</a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table id="order-listing" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Shape</th>
+                                            <th>Carat</th>
+                                            <th>Purity</th>
+                                            <th>Certificate</th>
+                                            <th>Color</th>
+                                            <th>Fluorescence</th>
+                                            <th>Cut</th>
+                                            <th>Polish</th>
+                                            <th>Symmetry</th>
+                                            <th></th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            no++;
+                                            <tr>
+                                                <td>
+                                                    @no
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.ShapeNavigation.ShapeName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Carat)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PurityNavigation.Purity)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CertificateNavigation.CertificateName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.ColorNavigation.Color)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.FluorescenceNavigation.Fluorescence)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CutGrade)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Polish)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Symmetry)
+                                                </td>
+                                                <td>
+                                                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o text-primary" style="font-size: 17px;" aria-hidden="true"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash-o text-danger" style="font-size: 20px;" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CutGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Polish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symmetry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertificateNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FluorescenceNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurityNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShapeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CutGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Polish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symmetry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CertificateNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColorNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FluorescenceNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurityNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShapeNavigation.ShapeName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+-->

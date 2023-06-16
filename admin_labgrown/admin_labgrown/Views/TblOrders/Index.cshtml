@@ -1,0 +1,182 @@
+﻿@model IEnumerable<admin_labgrown.Models.TblOrder>
+
+@{
+    ViewData["Title"] = "Index";
+    int no = 0;
+    int no1 = 0;
+}
+
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row mb-4">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-8 card">
+                <div class="card-body">
+                    <!--<a class="btn btn-primary mr-2 mb-4" asp-action="Create">Create New</a>-->
+                    <h2 class="mb-4">Pending Orders</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table id="order-listing" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>User Detail</th>
+                                            <th>Product</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            if (item.Status == 0)
+                                            {
+                                                no++;
+                                            <tr>
+                                                <td>
+                                                    @no
+                                                </td>
+                                                <td>
+                                                        <a asp-controller="TblRegisters" asp-action="Details" asp-route-id="@item.User.Id">@Html.DisplayFor(modelItem => item.User.FName) @Html.DisplayFor(modelItem => item.User.LName)</a>
+                                                </td>
+                                                <td>
+                                                        <a asp-controller="TblProducts" asp-action="Details" asp-route-id="@item.Product.Id">@Html.DisplayFor(modelItem => item.Product.ShapeNavigation.ShapeName) W @Html.DisplayFor(modelItem => item.Product.Carat)</a>
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Amount)
+                                                </td>
+                                                <td>
+                                                        <a asp-action="Confirm" asp-route-id="@item.Id" class="text-light btn btn-primary pt-2 pb-2">Confirm</a>
+                                                </td>
+                                                <td>
+                                                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash-o text-danger" style="font-size: 20px;" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 card">
+                <div class="card-body">
+                    <!--<a class="btn btn-primary mr-2 mb-4" asp-action="Create">Create New</a>-->
+                    <h2 class="mb-4">Completed Orders</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table id="order-listing" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>User Detail</th>
+                                            <th>Product</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            if (item.Status == 1)
+                                            {
+                                                no1++;
+                                                <tr>
+                                                    <td>
+                                                        @no1
+                                                    </td>
+                                                    <td>
+                                                        <a asp-controller="TblRegisters" asp-action="Details" asp-route-id="@item.User.Id">@Html.DisplayFor(modelItem => item.User.FName) @Html.DisplayFor(modelItem => item.User.LName)</a>
+                                                    </td>
+                                                    <td>
+                                                        <a asp-controller="TblProducts" asp-action="Details" asp-route-id="@item.Product.Id">@Html.DisplayFor(modelItem => item.Product.ShapeNavigation.ShapeName) W @Html.DisplayFor(modelItem => item.Product.Carat)</a>
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Amount)
+                                                    </td>
+                                                    <td>
+                                                        Completed
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)    
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+-->
+

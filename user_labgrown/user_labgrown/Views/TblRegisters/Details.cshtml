@@ -1,0 +1,177 @@
+﻿@model user_labgrown.Models.TblRegister
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<table class="table table-bordered table-hover mt-5">
+    <tbody>
+            <tr>
+                <th scope="row">
+                    First Name
+                </th>
+                <td>
+                @Html.DisplayFor(model => model.FName)
+                </td>
+            </tr>
+
+        <tr>
+            <th scope="row">
+                Last Name
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.LName)
+            </td>
+        </tr>
+
+        <tr>
+                <th scope="row">
+                    Email
+                </th>
+                <td>
+                @Html.DisplayFor(model => model.Email)
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Password
+                </th>
+                <td>
+                @Html.DisplayFor(model => model.Password)
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Address Line 1
+                </th>
+                <td>
+                @Html.DisplayFor(model => model.Address1)
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Address Line 2
+                </th>
+                <td>
+                @Html.DisplayFor(model => model.Address2)
+                </td>
+            </tr>
+
+        <tr>
+            <th scope="row">
+                Postcode
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Postcode)
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                City
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.City)
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                State
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.State)
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">
+                Country
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Country.CountryName)
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> | 
+<a asp-controller="Logout" asp-action="Index">Log Out</a>
+
+
+<!--
+<h1>Details</h1>
+
+<div>
+    <h4>TblRegister</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FName)
+        </dt>
+        <dd class = "col-sm-10">
+            
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LName)
+        </dt>
+        <dd class = "col-sm-10">
+            
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Postcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Postcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Country.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+-->

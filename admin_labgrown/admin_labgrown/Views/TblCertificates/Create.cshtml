@@ -1,0 +1,64 @@
+﻿@model admin_labgrown.Models.TblCertificate
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <h1 class="card-title ml10">Create Certificate</h1>
+            <div class="col-md-2"></div>
+            <div class="col-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <form asp-action="Create" class="forms-sample">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="CertificateName" for="exampleInputName1">Certificate</label>
+                                <input asp-for="CertificateName" class="form-control" id="exampleInputName1" placeholder="Enter Certificate Name">
+                                <span asp-validation-for="CertificateName" class="text-danger"></span>
+                            </div>
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <a class="btn btn-light" asp-action="Index">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+<!--
+<h1>Create</h1>
+
+<h4>TblCertificate</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CertificateName" class="control-label"></label>
+                <input asp-for="CertificateName" class="form-control" />
+                <span asp-validation-for="CertificateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

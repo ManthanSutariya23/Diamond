@@ -1,0 +1,155 @@
+﻿@model user_labgrown.Models.TblRegister
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container mt-4 mb-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form asp-action="Edit">
+                <div class="login-form">
+                    <h4 class="login-title">Register</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-12 mb--20">
+                            <label asp-for="FName">First Name</label>
+                            <input asp-for="FName" type="text" placeholder="First Name">
+                            <span asp-validation-for="FName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6 col-12 mb--20">
+                            <label asp-for="LName">Last Name</label>
+                            <input asp-for="LName" type="text" placeholder="Last Name">
+                            <span asp-validation-for="LName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Email">Email Address*</label>
+                            <input asp-for="Email" type="email" placeholder="Email Address">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Password">Password</label>
+                            <input asp-for="Password" placeholder="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Address1">Address Line 1</label>
+                            <input asp-for="Address1" type="text" placeholder="Address Line 1">
+                            <span asp-validation-for="Address1" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Address2">Address Line 2</label>
+                            <input asp-for="Address2" type="text" placeholder="Address Line 2">
+                            <span asp-validation-for="Address2" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Postcode">Postcode</label>
+                            <input asp-for="Postcode" type="text" placeholder="Postcode">
+                            <span asp-validation-for="Postcode" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="City">City</label>
+                            <input asp-for="City" type="text" placeholder="City">
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="State">State</label>
+                            <input asp-for="State" type="text" placeholder="State">
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="CountryId"></label>
+                            <select asp-for="CountryId" asp-items="ViewBag.CountryId" class="selectbox" placeholder="State"></select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <input type="submit" value="Update" class="hiraola-login_btn" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
+<!--
+
+<h1>Edit</h1>
+
+<h4>TblRegister</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="FName" class="control-label"></label>
+                <input asp-for="FName" class="form-control" />
+                <span asp-validation-for="FName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LName" class="control-label"></label>
+                <input asp-for="LName" class="form-control" />
+                <span asp-validation-for="LName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address1" class="control-label"></label>
+                <input asp-for="Address1" class="form-control" />
+                <span asp-validation-for="Address1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address2" class="control-label"></label>
+                <input asp-for="Address2" class="form-control" />
+                <span asp-validation-for="Address2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Postcode" class="control-label"></label>
+                <input asp-for="Postcode" class="form-control" />
+                <span asp-validation-for="Postcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryId" class="control-label"></label>
+                <select asp-for="CountryId" class="form-control" asp-items="ViewBag.CountryId"></select>
+                <span asp-validation-for="CountryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

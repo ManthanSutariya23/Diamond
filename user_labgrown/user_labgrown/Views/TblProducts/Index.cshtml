@@ -1,0 +1,163 @@
+﻿@model IEnumerable<user_labgrown.Models.TblProduct>
+
+@{
+    ViewData["Title"] = "Index";
+    int no = 0;
+    int productId = 0;
+}
+
+<div class="breadcrumb-area mt-3">
+            <div class="container">
+        <div class="breadcrumb-content">
+                    <h2>Shop</h2>
+                    <ul>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="active">Shop List</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<table class="table table-bordered table-hover mt-5">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Shape</th>
+            <th scope="col">Carat</th>
+            <th scope="col">Purity</th>
+            <th scope="col">Certificate</th>
+            <th scope="col">Color</th>
+            <th scope="col">Fluorescence</th>
+            <th scope="col">Cut</th>
+            <th scope="col">Polish</th>
+            <th scope="col">Symmetry</th>
+            <th scope="col">Order</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+        no++;
+            productId = item.Id;
+            <tr>
+                <td scope="row">
+                    @no
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShapeNavigation.ShapeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Carat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PurityNavigation.Purity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CertificateNavigation.CertificateName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ColorNavigation.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FluorescenceNavigation.Fluorescence)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CutGrade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Polish)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Symmetry)
+                </td>
+                <td>
+                    <a asp-action="OrderNow" asp-route-id="@item.Id">Order Now</a>
+                </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<!--
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CutGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Polish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symmetry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertificateNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FluorescenceNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurityNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShapeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CutGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Polish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symmetry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CertificateNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColorNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FluorescenceNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurityNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShapeNavigation.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+-->
+

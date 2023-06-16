@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Labgrown Diamond</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/user_labgrown.styles.css" asp-append-version="true" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico">
+
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="true">
+    <!-- Fontawesome Star -->
+    <link rel="stylesheet" href="~/css/fontawesome-stars.css" asp-append-version="true">
+    <!-- Ion Icon -->
+    <link rel="stylesheet" href="~/css/ionicons.min.css" asp-append-version="true">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="~/css/slick.min.css" asp-append-version="true">
+    <!-- Animation -->
+    <link rel="stylesheet" href="~/css/animate.min.css" asp-append-version="true">
+    <!-- jQuery Ui -->
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" asp-append-version="true">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="~/css/nice-select.min.css" asp-append-version="true">
+    <!-- Timecircles -->
+    <link rel="stylesheet" href="~/css/timecircles.min.css" asp-append-version="true">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">user_labgrown</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TblOrders" asp-action="Index">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TblRegisters" asp-action="Index">Register</a>
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TblProducts" asp-action="Index">Products</a>
+                        </li>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    -->
+    <header class="header-main_area">
+        <div class="header-bottom_area header-sticky stick">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 d-lg-none d-block">
+                        <div class="header-logo">
+                            <a href="index.html">
+                                <img src="assets/images/menu/logo/2.png" alt="Hiraola's Header Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 d-none d-lg-block position-static">
+                        <div class="main-menu_area">
+                            <nav>
+                                <ul>
+                                    <li class="dropdown-holder">
+                                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                    </li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                                    @if (ViewBag.Login == true)
+                                    {
+                                        <li><a asp-area="" asp-controller="TblRegisters" asp-action="Details">My Account</a></li>
+                                        <li><a asp-area="" asp-controller="TblOrders" asp-action="Index">Order</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-area="" asp-controller="TblRegisters" asp-action="Create">Login | Register</a></li>
+                                    }
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-8 col-sm-8">
+                        <div class="header-right_area">
+                            <ul>
+                                <li>
+                                    <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white d-lg-none d-block">
+                                        <i class="ion-navicon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-minicart_wrapper" id="miniCart">
+            <div class="offcanvas-menu-inner">
+                <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
+                <div class="minicart-content">
+                    <div class="minicart-heading">
+                        <h4>Shopping Cart</h4>
+                    </div>
+                    <ul class="minicart-list">
+                        <li class="minicart-product">
+                            <a class="product-item_remove" href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            <div class="product-item_img">
+                                <img src="assets/images/product/small-size/2-1.jpg" alt="Hiraola's Product Image">
+                            </div>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="shop-left-sidebar.html">Magni dolorum vel</a>
+                                <span class="product-item_quantity">1 x $120.80</span>
+                            </div>
+                        </li>
+                        <li class="minicart-product">
+                            <a class="product-item_remove" href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            <div class="product-item_img">
+                                <img src="assets/images/product/small-size/2-2.jpg" alt="Hiraola's Product Image">
+                            </div>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="shop-left-sidebar.html">Eius accusantium omnis</a>
+                                <span class="product-item_quantity">1 x $120.80</span>
+                            </div>
+                        </li>
+                        <li class="minicart-product">
+                            <a class="product-item_remove" href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            <div class="product-item_img">
+                                <img src="assets/images/product/small-size/2-3.jpg" alt="Hiraola's Product Image">
+                            </div>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="shop-left-sidebar.html">Aperiam adipisci dolorem</a>
+                                <span class="product-item_quantity">1 x $120.80</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="minicart-item_total">
+                    <span>Subtotal</span>
+                    <span class="ammount">$360.00</span>
+                </div>
+                <div class="minicart-btn_area">
+                    <a href="cart.html" class="hiraola-btn hiraola-btn_dark hiraola-btn_fullwidth">Minicart</a>
+                </div>
+                <div class="minicart-btn_area">
+                    <a href="checkout.html" class="hiraola-btn hiraola-btn_dark hiraola-btn_fullwidth">Checkout</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu_wrapper" id="mobileMenu">
+            <div class="offcanvas-menu-inner">
+                <div class="container">
+                    <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
+                    <nav class="offcanvas-navigation">
+                        <ul class="mobile-menu">
+                            <li class="menu-item active"><a href="#"><span class="mm-text">Home</span></a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Labgrown Diamond
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="~/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <!-- Modernizer JS -->
+    <script src="~/js/vendor/modernizr-3.11.2.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="~/js/plugins/slick.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="~/js/plugins/countdown.min.js"></script>
+    <!-- Barrating JS -->
+    <script src="~/js/plugins/jquery.barrating.min.js"></script>
+    <!-- Counterup JS -->
+    <script src="~/js/plugins/jquery.counterup.min.js"></script>
+    <!-- Waypoints -->
+    <script src="~/js/plugins/waypoints.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="~/js/plugins/jquery.nice-select.min.js"></script>
+    <!-- Sticky Sidebar JS -->
+    <script src="~/js/plugins/jquery.sticky-sidebar.js"></script>
+    <!-- Jquery-ui JS -->
+    <script src="~/js/plugins/jquery-ui.min.js"></script>
+    <!-- Scroll Top JS -->
+    <script src="~/js/plugins/scroll-top.min.js"></script>
+    <!-- Theia Sticky Sidebar JS -->
+    <script src="~/js/plugins/theia-sticky-sidebar.min.js"></script>
+    <!-- ElevateZoom JS -->
+    <script src="~/js/plugins/jquery.elevateZoom-3.0.8.min.js"></script>
+    <!-- Timecircles JS -->
+    <script src="~/js/plugins/timecircles.min.js"></script>
+    <!-- Mailchimp Ajax JS -->
+    <script src="~/js/plugins/mailchimp-ajax.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

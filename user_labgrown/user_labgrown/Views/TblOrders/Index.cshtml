@@ -1,0 +1,110 @@
+﻿@model IEnumerable<user_labgrown.Models.TblOrder>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mt-5">Your Order</h1>
+
+<table class="table table-bordered table-hover mt-5 text-center">
+    <thead>
+        <tr>
+            <th>
+                Product
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var id = ViewBag.userid;
+            if (id == item.UserId)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.ShapeNavigation.ShapeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @if(item.Status == 0)
+                        {
+                            <span>Pending</span>
+                        } else
+                        {
+                            <span>Confirm</span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.Status == 0)
+                        {
+
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete Order</a>
+                        }
+                        else
+                        {
+                            <span></span>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!--
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            var id = ViewBag.userid;
+            if (id == item.UserId)
+            {
+                <tr>
+                    <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+}
+    </tbody>
+</table>
+-->

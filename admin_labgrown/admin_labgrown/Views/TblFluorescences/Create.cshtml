@@ -1,0 +1,38 @@
+﻿@model admin_labgrown.Models.TblFluorescence
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <h1 class="card-title ml10">Create Fluorescence</h1>
+            <div class="col-md-2"></div>
+            <div class="col-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <form asp-action="Create" class="forms-sample">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Fluorescence" for="exampleInputName1">Fluorescence</label>
+                                <input asp-for="Fluorescence" class="form-control" id="exampleInputName1" placeholder="Enter Fluorescence Name">
+                                <span asp-validation-for="Fluorescence" class="text-danger"></span>
+                            </div>
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <a class="btn btn-light" asp-action="Index">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
